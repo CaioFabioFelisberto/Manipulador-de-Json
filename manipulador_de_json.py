@@ -3,13 +3,13 @@ import os
 
 
 def salvar_dados(dados):
-    with open('meu_banco.json', 'w', encoding='utf-8') as f:
+    with open('meu_banco_json.json', 'w', encoding='utf-8') as f:
         json.dump(dados, f, indent=4, ensure_ascii=False)
 
 def carregar_dados():
-    if not os.path.exists('meu_banco.json'):
+    if not os.path.exists('meu_banco_json.json'):
         return []
-    with open('meu_banco.json', 'r', encoding='utf-8') as f:
+    with open('meu_banco_json.json', 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def criar_registro(lista_atual,numero_registro):
